@@ -1,0 +1,170 @@
+\section{Signal Extraction}
+The presence of DM production will be observable as an excess of events with respect to the expectations for the 
+SM backgrounds in a region at high missing transverse energy. Significant improvements in terms of sensitivity can be expected if 
+several bins in $\ETm$ are considered simultaneously. 
+A binned likelihood fit is performed in the range 250 \gev to 1000 \gev (or 200 \gev to 1000 \gev 
+for the monojet category), where the binning is chosen to ensure each corresponding bin of the control regions  
+is populated. The width of the highest $\ETm$ bin allows for ease of comparison to the previous CMS search~\cite{monojet1}. 
+
+%\subsection{W+jets and Z+jets Backgrounds}\label{sec:zjetsmodel}
+The accuracy with which the distribution for the major backgrounds (V+jets) is estimated is an essential part of this analysis. 
+Data from three control regions are utilised in order to determine both the shape and normalization for the V+jets backgrounds in 
+the signal region. The control regions are dimuon and photon control regions used to determine the \Zvvjets~contribution and a single-muon 
+control region, which is used to determine the contribution from \Wlvjets. The events in the control regions are divided into the three 
+categories, using the same selection criteria as described in Section~\ref{sec:selection}, with exceptions which are described in the following. 
+%The procedure adopted is to derive a correction in bins of \ETm, using the data control regions, 
+%which can be used to re-weight the simulated V+jets events in the signal region.  
+
+The dimuon control region is defined using the same selection as for the signal region, 
+but removing the muon veto. Instead, exactly two muons with opposite charges are 
+required. The leading \pt muon needs to be isolated and pass a tight identification and 
+the mass of the dimuon system, $m_{\mu\mu}$,  must be compatible with the Z boson mass, 
+$60<m_{\mu\mu}<120$~\gev. The efficiency of the muon selection is measured 
+in data and simulation using a tag-and-probe method. A scale-factor of $0.985\pm0.010$ is derived 
+and applied twice (once per muon) to the simulated \Zjets~events passing the dimuon selection.
+
+As the decay branching ratio of \Zmm~is approximately 6 times smaller than that to neutrinos, the resulting statistical 
+uncertainty on the \Zvvjets~template becomes a dominant systematic uncertainty at large values of \ETm.
+A complementary approach is to additionally use events in data that have a high-$p_{T}$ 
+photon recoiling against jets to further 
+constrain the \Zvvjets~background template~\cite{CMS-PAS-SUS-08-002}. At large boson transverse momentum, the kinematics 
+of the \phojets~and \Zjets~processes become similar as the finite mass of the 
+Z boson becomes less relevant. The photon control region consists of events which are selected using a trigger requiring an 
+isolated  photon with transverse momentum greater than 150 GeV. 
+The selected events are required to have at least one photon with $p_{T} > 170~\textrm{GeV}$ and 
+$|\eta|<2.5$, ignoring photons in the ECAL transition region, $1.44 < |\eta|< 1.56$. 
+Additionally, the photons are required to pass a set of quality and isolation cuts designed 
+to reduce the contribution from jets faking photons. A conversion safe electron veto is 
+applied to remove Drell-Yan events. The efficiency of the selection is  
+measured in data using a tag-and-probe method in $Z\rightarrow ee$ events and compared to 
+that measured in simulation~\cite{photon_purity}. A scale-factor of $0.97\pm0.01$ is applied to simulated events passing the 
+selection to account for the difference in the photon identification efficiency between data and simulation. 
+
+The single-muon control region is defined by selecting events 
+with exactly one muon with \pt larger than 20\gev. The transverse 
+mass of the event, defined  as  $m_{T}=\sqrt{2\ETm p_{T}^{\mu} (1-\cos \phi)}$, 
+where $\phi$ is the angle between the muon and \ETm vector in the transverse plane, must also satisfy $50<m_{T}<100$ \gev, 
+selecting $W\rightarrow\mu\nu$ decays. As in the dimuon control region, the muon efficiency scale-factor is 
+applied to simulated events passing the selection. 
+
+In the dimuon, single-muon and photon control regions, the dimuon pair, single-muon or the photon's 
+momentum are removed and the \ETm ~is recalculated yielding a distribution of fake \ETm. The difference in the distribution of fake \ETm 
+between the observed data and that expected from simulation in the control regions is used to derive a correction 
+for the Z+jets and W+jets backgrounds in the signal region.
+ 
+The \ETm spectra of the V+jets backgrounds is determined through the use of a likelihood fit, simultaneously across all bins 
+in the three control regions. The expected number of events $N_{i}$ in a given bin $i$ of fake \ETm, for a particular event category, is given by, 
+$N^{Z_{\mu\mu}|\gamma }_{i}=  \dfrac{{\mu^{\Zvv}_{i}}}{R^{Z|\gamma}_{i}}$, 
+for the dimuon and photon control regions and  $N^{W}_{i} =  \dfrac{{\mu^{\Wlv}_{i}}}{R^{W}_{i}}$,
+for the single-muon control region. The parameters $\boldsymbol{\mu}^{\Zvv}$ and $\boldsymbol{\mu}^{\Wlv}$ are the free parameters 
+of the likelihood fit representing the yields of $\Zvvjets$ and $\Wlvjets$ in each bin of the signal region.
+
+The transfer factors $R^{Z}_{i}$ account for the ratio of $BR(\Zvv)/BR(\Zmm)$ and 
+the muon efficiency times acceptance in the dimuon control region, while $R^{\gamma}_{i}$ account for the ratio of differential 
+cross-sections between the Z+jet and photon+jet processes and the efficiency times acceptance of the photon selection for the photon 
+plus jet control region. These transfer factors are derived as the ratio of the number of \Zvvjets ~events in the signal region 
+to that of \phojets~or \Zmmjets~events in the photon and dimuon control regions, from the simulation.
+The differential boson $p_{T}$ cross-sections of photon and Z production are first corrected using NLO k-factors derived by  
+comparing their $p_{T}$ distributions in events generated at single parton level with Madgraph5\_aMC@NLO~\cite{amcatnlo}, and subsequently showered,  
+to the distributions produced at leading order before deriving the transfer factors. 
+
+For the single-muon control region, the transfer factors $R^{W}_{i}$ account for the difference between the 
+W+jets in the control region and the signal region due to the acceptance of the muon selection and lepton veto.
+These are derived from the expectation from simulated W+jets events in the signal region $\Wmn$ and in the control region.
+
+The likelihood is defined for each event category as the product over Poisson likelihoods for each bin in fake \ETm, in each of the three control regions, as
+
+\begin{align*}\label{eqn:cancdlh}
+\mathcal{L}_{\textrm{c}}(\boldsymbol{\mu}^{\textrm{c},\Zvv},\boldsymbol{\mu}^{\textrm{c},\Wlv},\boldsymbol{\theta},\boldsymbol{\phi}) &=        
+                \prod_{i} \mathrm{Poisson}\left(d^{\textrm{c},\gamma}_{i} |B^{\textrm{c},\gamma}_{i}(\boldsymbol{\phi}) +\frac{ \mu^{\textrm{c},\Zvv}_{i} }{R^{\textrm{c},\gamma}_{i}(\boldsymbol{\theta})}   \right) \\
+       &~\times \prod_{i} \mathrm{Poisson}\left(d^{\textrm{c},Z}_{i}      |B^{\textrm{c},Z}_{i}(\boldsymbol{\phi})      +\frac{ \mu^{\textrm{c},\Zvv}_{i} }{R^{\textrm{c},Z}_{i}     (\boldsymbol{\theta})}       \right ) \\
+       &~\times \prod_{i} \mathrm{Poisson}\left(d^{\textrm{c},W}_{i}      |B^{\textrm{c},W}_{i}(\boldsymbol{\phi})      +\frac{ \mu^{\textrm{c},\Wlv}_{i} }{R^{\textrm{c},W}_{i}     (\boldsymbol{\theta})}       \right), \numberthis\label{eqn:candclh}
+\end{align*}
+
+
+where $d^{c,\gamma/Z/W}_{i}$ are the observed number of events in each bin of the photon, dimuon and single-muon control regions.
+The superscript ``c'' has been introduced to signify the components which are independent in each of the categories. 
+The expected contributions from background processes in the dimuon, single-muon and photon control regions are denoted $B^{Z}$, $B^{W}$ and 
+$B^{\gamma}$ respectively.
+
+Systematic uncertainties are modelled as constrained nuisance parameters, $\boldsymbol{\theta}$, which allow for variation of 
+the transfer factors, $R^{\gamma/Z/W}$, in the fit and are treated as fully correlated between event categories.
+These include theoretical uncertainties on the photon to Z differential cross-section ratio from renormalization and factorization scale uncertainties. 
+Electroweak corrections to the ratio are not accounted for in the simulation. Such corrections 
+have been derived independently 
+and applied to the differential cross-section ratio. The full correction is also taken as an uncertainty on the ratio, 
+which is of the order of 15\% when the boson (Z or $\gamma$) \pt is at the TeV scale~\cite{Kuhn:2005gv}. This uncertainty is assumed to be uncorrelated 
+across bins of \ETm in order to be conservative. 
+Additionally, the uncertainty in the muon and photon selection 
+efficiency scale-factors are included and fully correlated across the event categories. The uncertainty on the 
+muon efficiency scale-factor is correlated between the single-muon and dimuon control regions.
+
+$B^{\gamma}$ is determined using a measurement of the purity of photon selection, as detailed in~\citep{photon_purity}. 
+For photons with $\pt> 170$~\gev, the purity is $0.97\pm0.01$. 
+Simulation is used to determine $B^{Z}$ and $B^{W}$, which are mostly from 
+diboson production. A systematic uncertainty of 10\% is included for the background normalization~\cite{tagkey2015250} and correlated between the 
+single-muon and dimuon control regions. A larger systematic uncertainty was considered to cover electroweak corrections at higher \ETm but this was found 
+not to impact the results. As with the uncertainties on the transfer-factors, the uncertainties on the backgrounds 
+are incorporated as nuisance parameters $\boldsymbol{\phi}$.
+The full likelihood is then given by the product of $\mathcal{L}_{\textrm{c}}$ over the three event categories with a Gaussian constraint term for each of the nuisance parameters.
+
+The likelihood is maximised (fit) with respect to the free parameters $\boldsymbol{\mu}^{c,\Zvv},~\boldsymbol{\mu}^{c,\Wlv}$ 
+and the nuisance parameters $\boldsymbol{\theta}$ and $\boldsymbol{\phi}$, simultaneously yielding the predictions for the $\Zvvjets$ and $\Wlvjets$ backgrounds.
+These re-weighted events are then binned to provide $\ETm$ templates for the two major backgrounds.
+The nuisance parameter uncertainties, as well as the statistical uncertainties from the control regions, are propagated as shape and normalization 
+variations for the Z+jets and W+jets $\ETm$ templates.  
+
+The remaining backgrounds are expected to be much smaller than those from V+jets and are estimated directly from the simulation. 
+Shape and normalization systematic uncertainties from the recoil corrections applied to these 
+backgrounds are included to account for the uncertainty in the energy scale and resolution 
+of jets. Additionally, a systematic uncertainty of 4\% is included for the top backgrounds due to the uncertainty of 
+the b-tagging efficiency for the b-jet veto in the resolved category. Systematic uncertainties of 7\%, 10\% and 50\% are included for the top, diboson and QCD backgrounds respectively to account 
+for the uncertainty in their production cross-sections. Finally, a systematic uncertainty of 2.6\% in the luminosity measurement~\cite{lumi} is included for 
+all of the MC derived backgrounds.
+
+
+%Table~\ref{tab:systematics} gives a summary of the systematic uncertainties on the backgrounds estimation which are propagated to the calculation of the limits.
+%Experimental uncertainties in the signal resulting from jet energy scale and resolution and V-tagging efficiency are included in the signal model for all of the interpretations described.
+
+%\begin{table*}[htbp]
+%  \begin{center}
+%    \topcaption{Systematic uncertainties and their relative effect on the expectation for the SM backgrounds. 
+%      \label{tab:systematics}}
+%    %\small
+%    \begin{tabular}{llccc}
+%      \hline
+%      \hline
+%      Systematic Uncertainty 	   	            & Process & Boosted & Resolved & Monojet  \\
+%      \hline
+%      \hline
+%      Control region fits$^{\dagger}$ & $\Zvvjets$  &6-20\%  &7.6-44\%  &2.5-9.5\%  \\
+%      			   	      & $\Wlvjets$  &10.5-55\% &14.5-320\%  &3.6-17\%  \\
+%      \hline
+%      Tau-id efficiency		& $\Wlvjets$      & 3.6\% & 3.6\% & 3.6\% \\
+%      \hline
+%      V-tag efficiency$^{\ddagger}$ 		& Dibosons, Top & \multicolumn{2}{c}{10\%,6\% } &  \\ 
+%      \hline
+%      b-tag efficiency 		& Top & \multicolumn{3}{c}{4\% } \\ 
+%      \hline
+%      \ETm recoil 		& Dibosons      & 0.6\% & 2.8\% & 0.3\%  \\ 
+%       				& Top    	& 1.1\% & 1.8\% & 1.3\%  \\ 
+%       				& $\Zlljets$    & 5.8\% & 9.4\% & 0.7\%  \\ 
+%      \hline
+%      $t\bar{t}$ norm  		& Top 	      & 7\%  & 7\%  & 7\% \\ 
+%      Dibosons norm 		& Dibosons    & 10\% & 10\% & 10\%\\ 
+%      QCD norm		 	& QCD 	      & 50\% & 50\% & 50\%\\ 
+%      \hline
+%      Luminosity  	 	& All except V+jets  & 2.6\% & 2.6\% & 2.6\% \\ 
+%      \hline 
+%      \hline
+%    \end{tabular}\\
+%    \end{center}
+%    \bottomcaption{\footnotesize{$^{\dagger}$ The relevant components of the fit uncertainties relating to theory and muon/photon identification scale-factors 
+%	in the control regions, described in Section~\ref{sec:zjetsmodel}, are included here and correlated between event categories.
+%	The numbers here indicate the range of the size of the uncertainties (the smallest to largest) in any \ETm bin due to these fits but should not be 
+%	interpreted as the systematic uncertainty which is propagated to the signal extraction.
+%	For the boosted category, the uncertainty of 320\% is simply the result of a small fitted yield in one of the bins of the single muon control region.\\
+%	$^{\ddagger}$ Uncertainty modeled as migration between the V-tagged (boosted and resolved) and monojet categories.
+%    }}
+%\end{table*}
+
