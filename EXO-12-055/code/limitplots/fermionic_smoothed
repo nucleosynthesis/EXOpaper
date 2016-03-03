@@ -1,0 +1,92 @@
+{
+//========= Macro generated from object: fermionic/fermionic
+//========= by ROOT version5.34/22
+   
+   TGraph *graph = new TGraph(55);
+   graph->SetName("fermionic");
+   graph->SetTitle("fermionic");
+   graph->SetFillColor(1);
+   graph->SetLineWidth(3);
+   graph->SetMarkerStyle(20);
+   graph->SetPoint(0,476.75,8.736864277);
+   graph->SetPoint(1,477.1493054,-2.318677113);
+   graph->SetPoint(2,477.5922201,16.5625);
+   graph->SetPoint(3,477.5974168,22.7875);
+   graph->SetPoint(4,476.75,27.31217728);
+   graph->SetPoint(5,476.4315503,29.0125);
+   graph->SetPoint(6,474.5581756,35.2375);
+   graph->SetPoint(7,474.4957787,41.4625);
+   graph->SetPoint(8,475.4204926,47.6875);
+   graph->SetPoint(9,475.020797,53.9125);
+   graph->SetPoint(10,476.75,58.57593372);
+   graph->SetPoint(11,475.2611008,59.51267115);
+   graph->SetPoint(12,473.3728961,64.48126163);
+   graph->SetPoint(13,474.5345987,66.3625);
+   graph->SetPoint(14,472.7522291,72.5875);
+   graph->SetPoint(15,474.3573828,78.8125);
+   graph->SetPoint(16,472.2149914,85.0375);
+   graph->SetPoint(17,469.7413092,91.2625);
+   graph->SetPoint(18,470.5171605,97.4875);
+   graph->SetPoint(19,470.9264565,103.7125);
+   graph->SetPoint(20,471.6235769,109.9375);
+   graph->SetPoint(21,471.2501082,116.1625);
+   graph->SetPoint(22,471.2409972,122.3875);
+   graph->SetPoint(23,468.5810115,128.6125);
+   graph->SetPoint(24,467.8151373,134.8375);
+   graph->SetPoint(25,469.0655986,141.0625);
+   graph->SetPoint(26,470.0306254,147.2875);
+   graph->SetPoint(27,469.0685891,153.5125);
+   graph->SetPoint(28,466.0175284,159.7375);
+   graph->SetPoint(29,463.0547903,165.9625);
+   graph->SetPoint(30,462.25,168.3919782);
+   graph->SetPoint(31,460.945567,172.1875);
+   graph->SetPoint(32,453.5467475,174.8943835);
+   graph->SetPoint(33,447.8821337,176.5505803);
+   graph->SetPoint(34,445.993929,177.102646);
+   graph->SetPoint(35,440.3293152,178.2067772);
+   graph->SetPoint(36,433.25,179.6055008);
+   graph->SetPoint(37,418.75,181.6500796);
+   graph->SetPoint(38,404.25,183.9187566);
+   graph->SetPoint(39,390.9922325,184.6375);
+   graph->SetPoint(40,389.75,184.7048452);
+   graph->SetPoint(41,375.25,184.6377435);
+   graph->SetPoint(42,375.2494327,184.6375);
+   graph->SetPoint(43,360.75,178.4192623);
+   graph->SetPoint(44,360.7342485,178.4125);
+   graph->SetPoint(45,346.25,172.1986425);
+   graph->SetPoint(46,344.9749815,171.5819899);
+   graph->SetPoint(47,333.6457537,164.4051369);
+   graph->SetPoint(48,331.75,159.7513825);
+   graph->SetPoint(49,315.7078098,153.3638248);
+   graph->SetPoint(50,317.25,153.5301845);
+   graph->SetPoint(51,317.2088072,153.5125);
+   graph->SetPoint(52,302.75,147.3061701);
+   graph->SetPoint(53,302.7065115,147.2875);
+   graph->SetPoint(54,0,0);
+   
+   TH1F *Graph_fermionic1 = new TH1F("Graph_fermionic1","fermionic",100,0,525.676);
+   Graph_fermionic1->SetMinimum(0);
+   Graph_fermionic1->SetMaximum(208.46);
+   Graph_fermionic1->SetDirectory(0);
+   Graph_fermionic1->SetStats(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#000099");
+   Graph_fermionic1->SetLineColor(ci);
+   Graph_fermionic1->GetXaxis()->SetLabelFont(42);
+   Graph_fermionic1->GetXaxis()->SetLabelSize(0.035);
+   Graph_fermionic1->GetXaxis()->SetTitleSize(0.035);
+   Graph_fermionic1->GetXaxis()->SetTitleFont(42);
+   Graph_fermionic1->GetYaxis()->SetLabelFont(42);
+   Graph_fermionic1->GetYaxis()->SetLabelSize(0.035);
+   Graph_fermionic1->GetYaxis()->SetTitleSize(0.035);
+   Graph_fermionic1->GetYaxis()->SetTitleFont(42);
+   Graph_fermionic1->GetZaxis()->SetLabelFont(42);
+   Graph_fermionic1->GetZaxis()->SetLabelSize(0.035);
+   Graph_fermionic1->GetZaxis()->SetTitleSize(0.035);
+   Graph_fermionic1->GetZaxis()->SetTitleFont(42);
+   graph->SetHistogram(Graph_fermionic1);
+   
+   graph->Draw("");
+}
