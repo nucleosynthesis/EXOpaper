@@ -1,4 +1,4 @@
-\section{Signal Extraction}
+\section{Background Estimation}
 
 The presence of DM production will be observable as an excess of events with respect to the expectations for the 
 SM backgrounds in a region at high missing transverse momentum. Significant improvements in terms of sensitivity can be expected if 
@@ -11,7 +11,9 @@ corresponding bin of a set of control regions is populated. The width of the hig
 
 Data from three control regions, the dimuon and photon control regions, and the single-muon control region, are used to determine the contributions from \Zvvjets~and 
 \Wlvjets~respectively. The events in the control regions are divided into the three  categories, using the same selection criteria as 
-described in Section~\ref{sec:selection}. In the dimuon, single-muon and photon control regions, the dimuon pair, single-muon or the photon's 
+described in Section~\ref{sec:selection} but in addition requiring the presence of a pair of opposite charged muons consistent with a Z boson decay, a high $p_{T}$ photon 
+or a single muon consistent with a semileptonic W boson decay.
+In the dimuon, single-muon and photon control regions, the dimuon pair, single-muon or the photon's 
 momentum are removed and the \ETm ~is recalculated yielding a distribution of fake \ETm. The distribution of fake \ETm 
 in data in the control regions is used to derive the expectation from the Z+jets and W+jets backgrounds in the signal region.
 
@@ -30,7 +32,7 @@ for the single-muon control region. The parameters $\boldsymbol{\mu}^{\Zvv}$ and
 of the likelihood representing the yields of $\Zvvjets$ and $\Wlvjets$
 in each bin of the signal region. The additional terms  $R^{W}_{i}$,
 $R^{Z|\gamma}_{i}$ denote transfer factors which account for the
-extrapolation of a sepcific background from the signal region to the control regions. The likelihood function for a 
+extrapolation of a specific background from the signal region to the control regions. The likelihood function for a 
 particular category, $c$, is given as,   
 
 \begin{align*}
@@ -60,7 +62,7 @@ Electroweak corrections to the ratio are not accounted for in the simulation. Th
 which is of the order of 15\% when the boson (Z or $\gamma$) \pt is at the TeV scale~\cite{Kuhn:2005gv}. A conservative choice is made in assuming 
 this uncertainty to be uncorrelated across bins of \ETm. Additionally, the uncertainty in the muon selection efficiency, photon selection efficiency, 
 and photon purity are included and fully correlated across the event categories and control regions, where relevant. A systematic uncertainty of 10\% 
-is included for the top and diboson background normalizations~\cite{tagkey2015250} and correlated between the single-muon and dimuon control regions. The results of a fit to the control regions are shown in Figure~\ref{fig:combined_fit_result}.
+is included for the top and diboson background normalisations~\cite{tagkey2015250} and correlated between the single-muon and dimuon control regions. The results of a fit to the control regions are shown in Figure~\ref{fig:combined_fit_result}.
  
 \begin{figure*}[hbtp]\begin{center}
  \includegraphics[width=0.32\textwidth]{figures/post_fit_photon_monojet.pdf}
@@ -85,7 +87,7 @@ The remaining backgrounds are expected to be much smaller than those from V+jets
 Shape and normalization systematic uncertainties from the recoil corrections applied to these 
 backgrounds are included to account for the uncertainty in the energy scale and resolution 
 of jets. Additionally, a systematic uncertainty of 4\% is included for the top backgrounds due to the uncertainty of 
-the b-tagging efficiency for the b-jet veto in the resolved category. Systematic uncertainties of 7\%, 10\% and 50\% are included for the top~\cite{Khachatryan:2015oqa}, diboson~\cite{tagkey2015250,Khachatryan:2015sga} and QCD backgrounds~\cite{Khachatryan:2014rra} respectively to account for the uncertainty in their production cross-sections. These individual backgrounds have been studied separately using dedicated control regions in data in order to validate these systematic uncertainties. Finally, a systematic uncertainty of 2.6\% in the luminosity 
+the b-tagging efficiency for the b-jet veto in the resolved category. Systematic uncertainties of 7\%, 10\% and 50\% are included for the top~\cite{Khachatryan:2015oqa}, diboson~\cite{tagkey2015250,Khachatryan:2015sga} and QCD backgrounds~\cite{monojet1} respectively to account for the uncertainty in their production cross-sections. These individual backgrounds have been studied separately using dedicated control regions in data in order to validate these systematic uncertainties. Finally, a systematic uncertainty of 2.6\% in the luminosity 
 measurement~\cite{lumi} is included for all of the MC derived backgrounds.
 
 
